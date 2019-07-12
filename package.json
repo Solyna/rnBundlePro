@@ -18,10 +18,19 @@
     "@types/react": "^16.8.23",
     "@types/react-native": "^0.60.0",
     "@types/react-test-renderer": "^16.8.2",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
     "babel-jest": "^24.8.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
     "grunt": "^1.0.4",
+    "husky": "^3.0.0",
     "jest": "^24.8.0",
+    "lint-staged": "^9.2.0",
     "metro-react-native-babel-preset": "^0.54.1",
+    "prettier": "^1.18.2",
     "react-native-typescript-transformer": "^1.2.12",
     "react-test-renderer": "16.8.3",
     "ts-jest": "^24.0.2",
@@ -44,5 +53,17 @@
       "<rootDir>/node_modules/"
     ],
     "cacheDirectory": ".jest/cache"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit && lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx}": [
+      "eslint . --fix",
+      "git add"
+    ]
   }
 }
