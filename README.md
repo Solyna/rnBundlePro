@@ -19,7 +19,7 @@ react-native bundle --entry-file index.js --platform ios --dev false --bundle-ou
     }
 }
 ```
-4. XCode中集成](https://www.jianshu.com/p/5bdce8da4d88)添加bundle目录，然后修改AppDelegate.m中加载包的方式
+4. [XCode中集成](https://www.jianshu.com/p/5bdce8da4d88)添加bundle目录，然后修改AppDelegate.m中加载包的方式
 >注意两点
 ```
 1. 修改文件后（操作见下图），运行react-native run-ios
@@ -31,11 +31,10 @@ rnBundlePro项目的入口文件  对应于   bundle目录下的文件名为inde
 2. react-native run-ios运行连接是开发环境，打的不是内置包，此时需要使用npm start运行
 ```
 > 在Xcode中修改AppDelegate.m文件
-![修改示意图](http://pu3lpqiql.bkt.clouddn.com/WechatIMG11.jpeg
-)
+[修改示意图](http://pu3lpqiql.bkt.clouddn.com/WechatIMG11.jpeg)
 > 需要运行npm start错误截图
-![错误图片](http://pu3lpqiql.bkt.clouddn.com/WechatIMG299.jpeg)
+[错误图片](http://pu3lpqiql.bkt.clouddn.com/WechatIMG299.jpeg)
 > 目录结构
-![目录结构](http://pu3lpqiql.bkt.clouddn.com/WechatIMG12.jpeg)
+[目录结构](http://pu3lpqiql.bkt.clouddn.com/WechatIMG12.jpeg)
 
 
